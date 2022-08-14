@@ -98,8 +98,8 @@ loading ? (<Loading/>) : error ? (<ErrorPage/>) : (
 
      
 <p className='name' > {products.name} </p>
-       
-        <h4> Sold By  : {products.description} </h4>
+       <br/>
+        <h4> Description  : {products.description} </h4>
       
 
 
@@ -114,11 +114,11 @@ loading ? (<Loading/>) : error ? (<ErrorPage/>) : (
       
 
        
-
+<br/>
 
         <h2>Select Quantity</h2>
 
-
+<br/>
         <select value={quantity} onChange={ (e)=>setquantity(e.target.value) } >
 
             {[...Array(products.countInStock).keys()].map((x, i) => {
@@ -129,11 +129,11 @@ loading ? (<Loading/>) : error ? (<ErrorPage/>) : (
 
         </select >
 
-        <button onClick={addtocart}  >  Add to cart</button>
+        <button onClick={addtocart} style={{backgroundColor:'black' , color:'white' , borderRadius:'12px' , padding:'3px' }}  >  Add to cart</button>
 
 
 
-        <h3>  price /kg  {products.price} </h3>
+        <h3>  price /unit  {products.price} </h3>
 
 <hr/>
 

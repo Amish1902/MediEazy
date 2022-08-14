@@ -86,6 +86,8 @@ const Profile = () => {
                     <br></br>
                     <button id="btn" type="submit"   > Update </button>
                     <p id='Message' ></p>
+
+                    <br/>
                 </form>
 
                 </div>

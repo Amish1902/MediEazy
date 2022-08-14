@@ -49,9 +49,16 @@ const  CheckOut = ({amount}) => {
             
             >
 
+<br/><br/>
 
-            <button className="btn" > PAYNOW </button>
-
+            <button className="btn" 
+            
+            style={{backgroundColor:'black' , color:'white' }}
+            
+            > PAYNOW </button>
+{
+    
+}
             </StripeCheckout>
            
 

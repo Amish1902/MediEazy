@@ -32,7 +32,7 @@ const  UserList = () => {
         <div>
            <h3> User List  </h3>
 
-           <table>
+           <table style={{width:'90%'}} id="customers" >
                <thead>
                    <tr>
                    <th>User Id</th>

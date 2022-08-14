@@ -17,6 +17,7 @@ import AdminScreen from './screen/adminscreen'
 import FarmerRegister from './screen/farmerregister'
 import FarmerLogin from './screen/farmerlogin'
 import LandingPage from './screen/landingpage'
+import AllProducts from './screen/allproducts';
 
 function App() {
   const currentuser = JSON.parse(localStorage.getItem('currentUser'))
@@ -28,7 +29,7 @@ function App() {
    {/* <HomeScreen/> */}
    <Navbar/>
    <BrowserRouter>
-   <Route exact path="/landing" component={LandingPage} ></Route>
+   {/* <Route exact path="/landing" component={LandingPage} ></Route> */}
    <Route exact path="/" component={HomeScreen} ></Route>
    <Route path="/product/:id" component={ProductScreenDescription}  ></Route>
     <Route  path="/cart"  component={CartScreen}  />
@@ -36,8 +37,9 @@ function App() {
     <Route path="/login" component={Login} ></Route>
     <Route  path="/farmerlogin" component={FarmerLogin}  />
     <Route path="/farmerregister" component={FarmerRegister} />
+    <Route path="/allproducts" component={AllProducts} />
  {  currentuser ? <Route path="/order" component={OrderScreen} ></Route> : ( null ) }
- {  currentuser ? <Route path="/orderinfo/:orderid" component={OrderInfo} ></Route> : ( <h3>Please Login First  </h3> ) }
+ {  currentuser ? <Route path="/orderinfo/:orderid" component={OrderInfo} ></Route> : ( <h3> </h3> ) }
  <Route path='/profile' component={Profile} ></Route>
  <Route path="/admin" component={AdminScreen}  ></Route>
 

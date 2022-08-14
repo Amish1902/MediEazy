@@ -54,7 +54,7 @@ export const FilterProducts=(searchkey,sortkey,category)=>dispatch=>{
         if(searchkey)
         {
             filterproduct = res.data.filter(product=> {
-                return product.name.toLowerCase().includes(searchkey)
+                return product.name.toLowerCase().includes(searchkey.toLowerCase())
             } )
         }
 

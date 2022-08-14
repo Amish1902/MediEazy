@@ -3,6 +3,8 @@ import style from './navbar.css'
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { LogOutUser } from '../actions/useraction'
+import FilterComp from '../component/filter'
+
 
 const Navbar = () => {
 
@@ -21,14 +23,10 @@ const Navbar = () => {
 
     return (
         <div>
-
+{/* 
             <ul>
                
-                
-                {/* <a  href="/login" >
-    <li>Login </li>
-    </a> */}
-
+     
 
                 {currentuser ?
                  (
@@ -37,7 +35,7 @@ const Navbar = () => {
                     <li>Home</li>
                 </a>
                        
-                        {/* <li onClick={() => { dispatch(LogOutUser()) }} >Logout</li> */}
+                       
 
 
                        
@@ -90,17 +88,85 @@ const Navbar = () => {
                         </div>
                     )}
 
-                {/* <a  href="/register" >
-    <li>Register </li>
-    </a> */}
-
-                {/* <li onClick={ ()=>{ dispatch(LogOutUser()) } } >Logout</li> */}
-
+        
         
 
 
 
+            </ul> */}
+
+{
+    currentuser ? ( <p>
+
+
+<nav class="navbar">
+        <div class="navbar-container container">
+           
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li style={{color:'black'}} ><a href="/profile" style={{color:'black'}} > {currentuser.name} </a></li>
+               
+                <li style={{color:'black'}} ><a href="/cart" style={{color:'black'}} >  <i class="fas fa-shopping-cart"></i> {CartItem.length}  </a></li>
+               
+                <li style={{color:'black'}} ><a href="/order" style={{color:'black'}} >Orders</a></li>
+                <a onClick={() => { dispatch(LogOutUser()) }}  >
+                            <li style={{color:'black'}} >Logout</li>
+                        </a>
             </ul>
+            <h1 class="logo">
+            <br/>
+            <a href="/" style={{textDecoration:'none' , fontSize:'35px' }} >
+
+
+Medico
+</a>
+            </h1>
+        </div>
+    </nav>
+
+    <br/><br/><br/>
+
+    </p> ) : ( <p>
+
+
+
+        <nav class="navbar">
+        <div class="navbar-container container">
+           
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li style={{color:'black'}} ><a href="/login" style={{color:'black'}} > Login </a></li>
+               
+               
+               
+                <li style={{color:'black'}} ><a href="/register" style={{color:'black'}} >Register</a></li>
+                
+            </ul>
+            <h1 class="logo">
+            <br/>
+            <a href="/" style={{textDecoration:'none' , fontSize:'35px' }} >
+
+
+Medico
+</a>
+            </h1>
+        </div>
+    </nav>
+
+    <br/><br/><br/>
+
+
+    </p> )
+}
+
 
         </div>
 

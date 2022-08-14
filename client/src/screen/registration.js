@@ -50,7 +50,7 @@ document.getElementById('Message').innerHTML = 'Passwords Not Matched'
     return(
         <div>
 
-
+<br/><br/><br/><br/><br/><br/>
 { loading && (<Loading/>) }
 <div  >
     
@@ -59,21 +59,16 @@ document.getElementById('Message').innerHTML = 'Passwords Not Matched'
 
 
 
-<div className="gridcontain" >
-
-
-<div className='leftpart' >
-<br/>
-<img   src='https://t3.ftcdn.net/jpg/03/14/73/72/360_F_314737297_kEHcO3HfO8IjUvQzQOtDxMtUgZ1AnR5O.jpg'  />
-
-</div>
+<div id="boxshad" >
 
 
 
 
 
 
-<div className='rightpart' >
+
+
+<div  >
 
 <h1> Register </h1>
 
@@ -95,7 +90,7 @@ document.getElementById('Message').innerHTML = 'Passwords Not Matched'
 </form>
 
 <a href="/login" > Click here to login </a>
-
+<br/><br/>
 
 </div>
    

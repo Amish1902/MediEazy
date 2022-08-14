@@ -17,9 +17,9 @@ let countotal = CartItem.reduce( (acc,item)=> acc+ (item.price*item.quantity) , 
 
 <br></br><br></br><br></br>
             <h1> This is Cart Screen</h1>
-            <p> Length = {CartItem.length} </p>
+           
 
-            <table style={{width:'100%'}}>
+            <table style={{width:'95%'}} id="customers" >
                 <thead>
                 <tr>
     <th>Name</th>

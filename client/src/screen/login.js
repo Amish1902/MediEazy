@@ -53,22 +53,18 @@ const Login=()=>{
 
 
 
-
-<div className="gridcontain" >
-
-
+<br/><br/><br/><br/><br/><br/>
+<div  >
 
 
 
-<div className='leftpart' >
-<br/>
-<img   src='https://image.freepik.com/free-vector/happy-female-farmer-working-with-smart-farm-flat-illustration_74855-14050.jpg'  />
-
-</div>
 
 
 
-<div className='rightpart' >
+
+
+
+<div id="boxshad"  >
 
 <h1  > Login </h1>
    
@@ -89,9 +85,9 @@ id="fashionform" ></input>
 <p id='Message' ></p>
 </form>
 <a href="/register" > Click here to register </a>
-
+<br/>   <br/>
 </div>
-   
+   <br/>
 
 
 

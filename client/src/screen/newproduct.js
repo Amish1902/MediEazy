@@ -49,18 +49,24 @@ const  AddNewProduct = () => {
            {loading && ( <Loading/> ) }
            {error && ( <ErrorPage/> ) }
 
+           <div id='boxshad' >
            <form onSubmit={addproduct} >
+           <br/><br/>
+<input type="text"  placeholder=" &nbsp; Enter name" required value={name}  onChange={ (e)=>{ setname(e.target.value) } }  ></input>
+<input type="text"  placeholder=" &nbsp; Enter price" required value={price}  onChange={ (e)=>{ setprice(e.target.value) } }  ></input>
+<input type="text"  placeholder=" &nbsp; Enter Stock" required value={countinstock}  onChange={ (e)=>{ setcountinstock(e.target.value) } }  ></input> 
+<input type="text"  placeholder=" &nbsp; Enter Image URL" required value={image}  onChange={ (e)=>{ setimage(e.target.value) } }  ></input> 
+<input type="text"  placeholder=" &nbsp; Enter Category" required value={category}  onChange={ (e)=>{ setcategory(e.target.value) } }  ></input> 
+<input type="text"  placeholder=" &nbsp; Enter Descroption" required value={description}  onChange={ (e)=>{ setdescription(e.target.value) } }  ></input>   
+<br/>
+<button type="submit" style={{
+    padding:'10px' , borderRadius:'5px'
+}} > SUBMIT </button>  
+  <br/><br/>
+   </form>
+           </div>
 
-        <input type="text"  placeholder="enter name" required value={name}  onChange={ (e)=>{ setname(e.target.value) } }  ></input>
-        <input type="text"  placeholder="enter price" required value={price}  onChange={ (e)=>{ setprice(e.target.value) } }  ></input>
-        <input type="text"  placeholder="enter Stock" required value={countinstock}  onChange={ (e)=>{ setcountinstock(e.target.value) } }  ></input> 
-        <input type="text"  placeholder="enter Image URL" required value={image}  onChange={ (e)=>{ setimage(e.target.value) } }  ></input> 
-        <input type="text"  placeholder="enter Category" required value={category}  onChange={ (e)=>{ setcategory(e.target.value) } }  ></input> 
-        <input type="text"  placeholder="Enter Name of Seller" required value={description}  onChange={ (e)=>{ setdescription(e.target.value) } }  ></input>   
-        <br/>
-        <button type="submit"  > SUBMIT </button>  
-          
-           </form>
+        
 
 
 

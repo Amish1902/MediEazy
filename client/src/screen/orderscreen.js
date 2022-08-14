@@ -46,7 +46,7 @@ const {orders , error , loading } = orderstate
 
                <h1 style={{textAlign:'center'  }} >My Orders</h1>
 
-               <table   className='tablestyle'  >
+               <table style={{width:'95%'}} id="customers" >
                   
                        <tr  > 
 

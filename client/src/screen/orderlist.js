@@ -8,7 +8,7 @@ import ErrorPage from '../component/error'
 import FilterComp from '../component/filter'
 import Message from '../component/message';
 import { user, wind } from 'fontawesome';
-
+import style from './cart.css'
 
 const OrderList = () => {
 
@@ -29,7 +29,7 @@ const OrderList = () => {
             {loading && (<Loading />)}
             {error && (<Message message='Something Went Wrong' />)}
 
-            <table>
+            <table  id="customers"  style={{width:'90%'}}>
 
                 <thead>
                     <tr>

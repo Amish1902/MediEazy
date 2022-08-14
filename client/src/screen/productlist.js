@@ -44,7 +44,7 @@ const  ProductList = () => {
         <div>
            <h3> Product List  </h3>
 
-           <table >
+           <table id="customers" >
                <thead>
                    <tr>
                        <th>Name</th>
@@ -53,7 +53,7 @@ const  ProductList = () => {
                        <th>ID</th>
                        <th>Delete</th>
                        <th> Edit </th>
-                       <th> Bids Placed </th>
+                       <th> Reviews</th>
                       
                    </tr>
                </thead>

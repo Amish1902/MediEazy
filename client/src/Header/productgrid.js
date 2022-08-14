@@ -24,15 +24,17 @@ export default function ProductGrid({prod})
 <div  className="iii"  >
 
 <Link to={`product/${prod._id}`} style={{textDecoration:'none' , color:'black' }} >
-             <div className="griditemm" >
+             <div className="griditemm1" >
 
-<h3> {prod.name} </h3>
+<br/>
+<h4> {prod.name} </h4>
 
 <img  src={prod.image} id="img" />
 
-<p> Expected Price : {prod.price} /kg   </p>
-<p>Quantity : {prod.countInStock} Kg  &nbsp; &nbsp; Sold By : {prod.description}   </p>
+<p>  Price : {prod.price} /unit   </p>
+<p>Quantity Available : {prod.countInStock} pieces  &nbsp; &nbsp;   </p>
 
+<br/>
 </div>
 
 </Link>

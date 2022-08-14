@@ -38,7 +38,7 @@ const  ReviewComponent = ({products}) => {
     if(alreadyreviewd)
     {
         //alert(`You've already reviewed this product`)
-        document.getElementById('sub').innerHTML=`You've Already Placed Your Bid`
+        document.getElementById('sub').innerHTML=`You've Already Placed Your Review`
     }
     else{
 
@@ -65,11 +65,14 @@ const  ReviewComponent = ({products}) => {
 
     return (
         <div>
-           <h2> Place Your Bid  </h2>
+           <h2> Provide Your Reviews </h2>
 
            <input type="text" value={comment} onChange={ (e)=>{ setcomment(e.target.value) } }  ></input>
 
-            <button onClick={senreview} id="sub"  > Bid Now  </button>
+            <button onClick={senreview} id="sub" 
+            style={{backgroundColor:'black' , color:'white' , borderRadius:'12px' , padding:'10px' }}
+            
+            > Post  </button>
 
 
 
@@ -85,7 +88,7 @@ const  ReviewComponent = ({products}) => {
 
 
 
-            <h2> Latest Bids </h2>
+            <h2> More Reviews</h2>
 
             { 
 
@@ -96,7 +99,7 @@ products.reviews &&  products.reviews.map(rev=> {
                     
                     <h3> &nbsp; &nbsp;By : {rev.name} </h3>
                     <hr/>
-                    <span>Bid :  {rev.comment}   </span>
+                    <span>Review :  {rev.comment}   </span>
                     <p> On : {rev.updatedAt.substring(0,10)} &nbsp; &nbsp;    </p> 
                   
                         </div>

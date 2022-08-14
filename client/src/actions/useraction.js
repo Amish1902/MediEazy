@@ -21,7 +21,8 @@ axios.post('/api/users/register',user).then( (res)=>{
     dispatch({type:'User_Register_Success'})
 
      console.log(res.data.message);
-alert(res.data.message);
+
+window.location.href='/login'
 
 
 

@@ -20,7 +20,7 @@ const  FilterComp = () => {
             <table  className='table' >
   <tr>
     <th>
-        <input type='text' placeholder='Search Product'  style={{width:'90%'}} 
+        <input type='text' placeholder=' &nbsp; Search Product...'  style={{width:'95%' , height:'40px' }} 
         
 
         value={searchkey} 
@@ -33,8 +33,11 @@ const  FilterComp = () => {
     <th>
 
 <select  value={sortkey} 
-        onChange={ (e)=>{ setsort(e.target.value) } } >
-    <option value="popular" > By Price </option>
+        onChange={ (e)=>{ setsort(e.target.value) } }
+        
+        style={{fontSize:'20px'}}
+        >
+    <option value="popular"  > By Price </option>
     <option value="htl" > High to Low </option>
     <option value="lth" > Low to High </option>
 </select>
@@ -43,24 +46,33 @@ const  FilterComp = () => {
     <th>
 
     <select  value={category} 
-        onChange={ (e)=>{ setcategory(e.target.value) } } >
+        onChange={ (e)=>{ setcategory(e.target.value) } }
+        
+        style={{fontSize:'20px'}}
+        >
     <option value="all" >All </option>
-    <option value="vegetable" >Vegetable</option>
-    <option value="fodder" > Fodder</option>
-    <option value="fruits" > Fruits</option>
-    <option value="rabi" > Rabi</option>
-    <option value="kharif" > Kharif</option>
+    <option value="allopathy" >Allopathy</option>
+    <option value="ayurvedic" > Ayurvedic</option>
+    <option value="homeopathic" > Homeopathic</option>
+   
     
 </select>
 
 
     </th>
-    <th>
-    <button onClick={ ()=>{ dispatch(FilterProducts(searchkey,sortkey,category)) } } > SEARCH </button>
+    <th style={{backgroundColor:'black'}} >
+    <button onClick={ ()=>{ dispatch(FilterProducts(searchkey,sortkey,category)) } }
+    
+    style={{backgroundColor:'black' , padding:'10px' , borderRadius:'0px' }}
+    
+    > <i class="fa fa-search" aria-hidden="true"></i>
+    </button>
     </th>
   </tr>
 
 </table>
+
+<br/>
         </div>
     )
 
